@@ -3,262 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Personalized Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <title>2024 MN Flavor Ban- HF2177</title>
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #eeeeee;
-            margin: 0;
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100%;
-        }
-        .instructions {
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-            text-align: center;
-        }
-        .form-container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 400px;
-        }
-        h2 {
-            margin-top: 0;
-            color: #333;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-        .form-group input {
-            width: 100%;
-            padding: 10px;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-            font-size: 16px;
-            transition: border-color 0.3s;
-        }
-        .form-group input:focus {
-            outline: none;
-            border-color: #007bff;
-        }
-        button {
-            width: 100%;
-            padding: 15px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #0056b3;
-        }
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .message { margin-bottom: 20px; }
+        .button { 
+            margin: 10px 0; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer; 
+        } 
     </style>
 </head>
-<body>
+<body>	
+	<h2>
+	 Click the button below to navigate to the call to action template, the template will send an email to the Commerce Finance and Policy committee members
+	</h2>
+	<a href="https://flowcode.com/p/M3s7KD7fL?fc=0" target="_blank" style="display: inline-block; background-color: #f44336; color: white; padding: 14px 25px; text-align: center; text-decoration: none; font-size: 16px; margin: 4px 2px; cursor: pointer; border: none; border-radius: 4px;">Action Template- CLICK HERE</a>
 
-<!-- <div class="instructions">
-    <p>Enter your personal details and press the link to download the Word document and open your e-mail client.</p>
-    <p>Once the email client opens, you'll want to press the attachment button and attach the testimony document that just downloaded.</p>
-    <p>Review the document, the subject, and the message. You can edit or delete them if you want to.</p>
-    <p>When you are satisfied, tap on the send button to send your e-mail to the committee.</p>
-</div> -->
+     <script>
+        function sendEmail(role) {
+            const email = 'simon.brown@house.mn.gov, josh.sande@house.mn.gov, rep.patty.acomb@house.mn.gov, rep.jeff.backer@house.mn.gov, rep.kristin.bahner@house.mn.gov, rep.robert.bierman@house.mn.gov, rep.ned.carroll@house.mn.gov, rep.steve.elkins@house.mn.gov, rep.peter.fischer@house.mn.gov, rep.amanda.hemmingsen-jaeger@house.mn.gov, rep.kaohly.her@house.mn.gov, rep.deb.kiel@house.mn.gov, rep.tina.liebling@house.mn.gov, rep.tom.murphy@house.mn.gov, rep.danny.nadeau@house.mn.gov, rep.anne.neu@house.mn.gov, rep.bernie.perryman@house.mn.gov, rep.duane.quam@house.mn.gov, rep.liz.reyer@house.mn.gov, rep.joe.schomacker@house.mn.gov, rep.andy.smith@house.mn.gov';
+            const bcc = 'stopmnflavorban@gmail.com';
+            let subject;
+            let body;
 
-<div class="form-container">
-    <div class="form-group">
-        <label for="firstName">Name:</label>
-        <input type="text" id="firstName" name="firstName" required>
-    </div>
+            if (role === 'owners') {
+			subject = encodeURIComponent('Oppose HF 2177');
+                body = encodeURIComponent('As a Minnesota business owner, taxpayer, and a voter I am submitting this testimony in opposition of HF 2177.');
+            } else if (role === 'employees') {
+				subject = encodeURIComponent('Minnesota Workers Oppose HF 2177');
+                body = encodeURIComponent('As a Minnesota taxpayer, voter, and an employee in the industry this bill targets, I am submitting this testimony in Opposition to HF 2177.');
+            } else if (role === 'consumers') {
+				subject = encodeURIComponent('I, and over 300,000 voters Oppose HF 2177');
+                body = encodeURIComponent('I am a Minnesota voter, taxpayer and a consumer of flavored nicotine products, and I am urging you to oppose HF 2177.\nStates that enacted flavor bans saw increased smoking rates, and huge reduction in revenue; contrary to public health goals. Vaping flavors helped me, and many others quit smoking.\nThe FDA recognizes some flavored vaping products as less harmful alternatives. In the end, banning flavors could push me to seek out-of-state or online alternatives, or worse, go back to cigarettes.\n\nThank you for considering the unintended consequences of HF 2177 on public health.');
+            }else if (role === 'citizen') {
+				subject = encodeURIComponent('Concerned Citizens Oppose HF 2177');
+                body = encodeURIComponent('Dear Committee Members,\nAs a concerned citizen of Minnesota, I strongly oppose House File 2177 (HF 2177), which aims to ban flavored tobacco products in our state. While I understand the goal of protecting public health and curbing youth tobacco use, a complete ban on flavored tobacco may have unintended consequences. Many adults who use these products prefer flavors like menthol or fruit. Banning these options could limit harm reduction alternatives for those trying to quit smoking. Additionally, small businesses, including local tobacco retailers, would be adversely affected by this ban. Instead of outright bans, let’s focus on education and prevention programs to discourage youth tobacco use. Empowering individuals with information is more effective than prohibition. Thank you for your attention to this matter.\nSincerely,');
+            }
 
-    <div class="form-group">
-        <label for="lastName">Business Name:</label>
-        <input type="text" id="lastName" name="lastName" required>
-    </div>
-
-    <div class="form-group">
-        <label for="streetAddress">Business Address:</label>
-        <input type="text" id="streetAddress" name="streetAddress" required>
-    </div>
-    <div class="form-group">
-        <label for="address">City, State and Zip Code:</label>
-        <input type="text" id="address" name="address" required>
-    </div>
-
-    <button onclick="sendMail()">Send Email</button>
-</div>
-
-<script src="https://unpkg.com/docx@latest"></script>
-
-<script>
-function generateWordDocument() {
-    const firstName = document.getElementById("firstName").value.trim();
-    const lastName = document.getElementById("lastName").value.trim();
-    const address = document.getElementById("address").value.trim();
-    const streetAddress =  document.getElementById("streetAddress").value.trim();
-    if (!firstName || !lastName || !address || !streetAddress) {
-        alert("Please fill in all the fields.");
-        return;
-    }
-
-     const paragraphs = [
-        "_FIRSTNAME_\n_LASTNAME_\n_STREETADDRESS_\n_ADDRESS_\n_DATE_\n\n\nHouse Commerce Finance and Policy Committee\n\nDear Honorable Committee members\nAs a responsible and law-abiding small business owner in the tobacco industry, I am writing to express my strong opposition to Minnesota HF 2177, which aims to prohibit the sale or offer for sale of flavored tobacco products. I urge the committee to reconsider this proposal due to its potential adverse effects on both public health and local businesses.\nFirstly, I understand and support the state's efforts to promote public health. However, as a law-abiding retailer, I believe that prohibiting flavored tobacco products may inadvertently drive consumers towards unregulated sources or more harmful alternatives. This could undermine the very goals of public health and harm reduction that the bill seeks to achieve.\nFurthermore, our business and many others in our industry are already subject to rigorous regulations and high taxes, such as the 95% tax on all tobacco products in Minnesota. Implementing further restrictions could severely impact our livelihoods and the livelihoods of our employees. It is crucial to consider the economic repercussions on small businesses like mine before enacting such legislation.\nMoreover, flavored tobacco products constitute a significant portion of our sales, and banning them would undoubtedly result in a substantial loss of revenue. This could lead to job losses and even business closures, particularly for small businesses already facing challenges in the aftermath of the pandemic.\nIn conclusion, while I share the state's commitment to public health, I urge the committee to seek alternative solutions that prioritize both health objectives and the economic well-being of small businesses. I am ready to collaborate and support evidence-based approaches that achieve a balance between public health goals and the preservation of our industry.\nThank you for considering my perspective and the interests of small businesses like mine in your deliberations on this critical issue.\nSincerely,\n\n_FIRSTNAME_\n_LASTNAME_",
-        "_FIRSTNAME_\n_LASTNAME_\n_STREETADDRESS_\n_ADDRESS_\n_DATE_\n\n\nSubject: Opposition to Minnesota HF 2177 - Prohibition of Flavored Tobacco Products\nDear Committee Members\nAs a responsible and law-abiding small business owner in the tobacco industry, I am writing to express my strong opposition to Minnesota HF 2177, a proposed bill that seeks to prohibit the sale or offer for sale of flavored tobacco products. I urge the committee to reconsider this proposal, taking into account its potential adverse effects on both public health and local businesses.\n1. Public Health Considerations:\n\nWhile I appreciate the state's commitment to promoting public health, I believe that an outright ban on flavored tobacco products may have unintended consequences. Here are some key points to consider:\n\n	 Consumer Behavior: Prohibiting flavored tobacco products could drive consumers toward unregulated sources or more harmful alternatives. It is essential to strike a balance between regulation and harm reduction to achieve the desired health outcomes.\n		Harm Reduction Goals: The bill's intention aligns with harm reduction objectives. However, we must ensure that the proposed measures do not inadvertently lead to unintended negative consequences.\n\n2. Economic Impact on Small Businesses:\n\nOur business, like many others in the industry, already operates under rigorous regulations and faces high taxes. For instance, Minnesota imposes a 95% tax on all tobacco products. Implementing further restrictions could significantly impact our livelihoods and the well-being of our employees. Small businesses need thoughtful consideration before enacting legislation that affects their operations.\n\n3. Revenue and Job Loss:\n\nFlavored tobacco products constitute a substantial portion of our sales. Banning these products would undoubtedly result in a significant revenue loss. Moreover, job losses and potential business closures would disproportionately affect small businesses, especially those still recovering from pandemic-related challenges.\n\n4. Seeking a Balanced Approach:\n\nIn conclusion, I share the state's commitment to public health. However, I encourage the committee to explore alternative solutions that achieve a balance between health objectives and economic viability for small businesses. Evidence-based approaches can help us find common ground while preserving the integrity of our industry.\n\nThank you for considering my perspective and advocating for the interests of small businesses like mine during your deliberations on this critical matter.\n\n_FIRSTNAME_\n_LASTNAME_",
-        "_FIRSTNAME_\n_LASTNAME_\n_STREETADDRESS_\n_ADDRESS_\n_DATE_\n\n\nHouse Commerce Finance and Policy Committee\n\nDear Honorable Chairman Stephenson, Rep O'Driscoll and Members\n\nI am writing to express my deep concerns regarding Minnesota HF 2177, which proposes to prohibit the sale or offer for sale of flavored tobacco products. As a business owner in the tobacco industry, I urge the committee to reconsider this bill due to its potential adverse effects on revenue and commerce.\n\nImplementing a ban on flavored tobacco products would significantly impact my business and many others in the industry. Flavored products constitute a substantial portion of our sales, and the sudden prohibition would result in a substantial loss of revenue. This loss could have severe consequences for the viability of our businesses and the livelihoods of our employees.\n\nFurthermore, the interruption to commerce caused by such a ban would be detrimental to local economies. Small businesses like mine contribute to the economic vitality of our communities, and any measure that hampers our ability to operate would have ripple effects throughout the supply chain.\n\nI understand the importance of public health initiatives, but I believe there are alternative approaches that can achieve the desired outcomes without resorting to prohibition. Instead of banning flavored tobacco products outright, I urge the committee to consider implementing regulations that balance public health concerns with the economic viability of businesses like mine.\n\nIn conclusion, I urge the committee to reconsider HF 2177 and its potential impact on revenue and commerce. Let us work together to find solutions that promote public health while also supporting small businesses and local economies.\n\nThank you for considering my perspective on this important issue.\n\nSincerely,\n\n_FIRSTNAME_\n_LASTNAME_"
-    ];
-
-
-    const randomIndex = Math.floor(Math.random() * paragraphs.length);
-    let selectedParagraph = paragraphs[randomIndex];
-
-    selectedParagraph = selectedParagraph.replace("_FIRSTNAME_", firstName);
-    selectedParagraph = selectedParagraph.replace("_LASTNAME_", lastName);
-    selectedParagraph = selectedParagraph.replace("_STREETADDRESS_", streetAddress);
-    selectedParagraph = selectedParagraph.replace("_ADDRESS_", address);
-	selectedParagraph = selectedParagraph.replace("_FIRSTNAME_", firstName);
-    selectedParagraph = selectedParagraph.replace("_LASTNAME_", lastName);
-	let currentDate = new Date();
-    let year = currentDate.getFullYear();
-	let month = currentDate.getMonth(); 
-	let day = currentDate.getDate();
-
-    selectedParagraph = selectedParagraph.replace("_DATE_", (month+1)+"/"+day+"/"+year);
-
-
-            // Assuming `docx` library is available
-
-const { Document, Packer, Paragraph, TextRun  } = docx;
-
-
-
-
-
-// Create a new document
-const doc = new Document({
-    sections: [{
-        properties: {},
-        children: selectedParagraph.split("\n").map(paragraphText => new Paragraph({
-                children: [
-                    new TextRun({
-                        text: paragraphText,
-                        size: 28, // Example of even smaller text (10pt)
-                    }),
-                ],
-            })),
-    }],
-});
-
-// Use Packer to create a Blob from the document
-Packer.toBlob(doc).then(blob => {
-    // Use the same approach as before to create a download link
-    const downloadLink = document.createElement("a");
-    downloadLink.href = URL.createObjectURL(blob);
-    downloadLink.download = "Written Testimony in opposition of HF 2177.docx";
-
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
-    document.body.removeChild(downloadLink);
-}).catch(err => console.error(err));
-
-
-    // const fileName = "Written Testimony in opposition of HF 2177.doc";
-
-    // const blob = new Blob([selectedParagraph], { type: "text/plain;charset=utf-8" });
-
-    // const downloadLink = document.createElement("a");
-    // downloadLink.href = URL.createObjectURL(blob);
-    // downloadLink.download = fileName;
-
-    // document.body.appendChild(downloadLink);
-    // downloadLink.click();
-    // document.body.removeChild(downloadLink);
-	sendMail();
-
-}
-function sendMail() {
-    const firstName = document.getElementById("firstName").value.trim();
-    const lastName = document.getElementById("lastName").value.trim();
-    const address = document.getElementById("address").value.trim();
-    const streetAddress =  document.getElementById("streetAddress").value.trim();
-    if (!firstName || !lastName || !address || !streetAddress) {
-        alert("Please fill in all the fields.");
-        return;
-    }
-
-
-    const emailtitles =[
-        "BIPOC Business owners Oppose HF 2177",
-    "Minority owned businesses Oppose HF 2177",
-    "HF 2177 will cost MN billions. VOTE NO",
-    "HF 2177 is a jobs killer",
-    "Protect safe access to tobacco. Reject HF 2177",
-    "MN Businesses Oppose HF 2177"
-];
-    const randomEamilIndex = Math.floor(Math.random() * emailtitles.length);
-    let selectedEmailTitle = emailtitles[randomEamilIndex];
-
-
-    var email = 'simon.brown@house.mn.gov, rep.zack.stephenson@house.mn.gov, rep.carlie.kotyza-witthuhn@house.mn.gov, rep.tim.odriscoll@house.mn.gov, rep.robert.bierman@house.mn.gov, rep.ethan.cha@house.mn.gov, rep.jeff.dotseth@house.mn.gov, rep.mike.freiberg@house.mn.gov, rep.ginny.klevorn@house.mn.gov, rep.erin.koegel@house.mn.gov, rep.larry.kraft@house.mn.gov, rep.tina.liebling@house.mn.gov, rep.anne.neu@house.mn.gov, rep.harry.niska@house.mn.gov, rep.bernie.perryman@house.mn.gov, rep.brian.pfarr@house.mn.gov'; // The email address to send to
-    var subject = encodeURIComponent(selectedEmailTitle); // The subject of the email
-   // var body = encodeURIComponent('Enclosed is my written testimony for inclusion in the committee\'s records.'); // The body of the email
-
-   const paragraphs = [
-        "_FIRSTNAME_\n_LASTNAME_\n_STREETADDRESS_\n_ADDRESS_\n_DATE_\n\n\nDears,\nAs a smoke shop owner and voter, I strongly oppose laws that prohibit flavored tobacco and vaping products. Here's why:\n		Economic Impact:anning these products harms small businesses like mine. Our revenue and local contributions would suffer.\n	Cross-Border Effects: Consumers may seek alternatives in neighboring states, hurting our state's economy.\n	Freedom of Choice: Blanket bans deny consumers access to products they enjoy. Focus on comprehensive regulations.\n		Balancing Act: Let's protect public health while supporting local businesses.\n\nThank you for considering these points.\n\nSincerely\n\n_FIRSTNAME_\n_LASTNAME_",
-    "_FIRSTNAME_\n_LASTNAME_\n_STREETADDRESS_\n_ADDRESS_\n_DATE_\n\n\nDears,\n\nI am writing to express my concern about the proposed flavor ban on e-cigarettes. As a constituent and business owner in Minnesota, I urge you to reconsider supporting this ban. While addressing youth vaping is important, banning flavored products could lead adult smokers to traditional cigarettes or online purchases. This overlooks the economic impact on businesses, tax revenue, and job losses. Instead, focusing on strict age restrictions, education, and enforcement campaigns can prevent underage access while supporting harm reduction for adult smokers. I respectfully urge you to reconsider your support for the flavor ban on e-cigarettes.\n\n_FIRSTNAME_\n_LASTNAME_",
-    "_FIRSTNAME_\n_LASTNAME_\n_STREETADDRESS_\n_ADDRESS_\n_DATE_\n\n\nI am writing to express my strong opposition to House File 2177 (HF 2177), which proposes to ban the sale of flavored tobacco products in Minnesota. Minnesota's 95% tax on tobacco generates substantial revenue, and banning flavored tobacco would lead to a significant loss in revenue, impacting government programs and exacerbating economic disparities, especially for minority-owned businesses. Furthermore, the ban would create a black market, undermining the state's efforts to regulate tobacco sales responsibly. Instead of a ban, I urge the committee to explore alternative measures such as stricter regulations and education campaigns to address concerns about flavored tobacco products while preserving commerce and revenue in our state.\nThank you for your consideration.\n\n_FIRSTNAME_\n_LASTNAME_",
-"_FIRSTNAME_\n_LASTNAME_\n_STREETADDRESS_\n_ADDRESS_\n_DATE_\n\n Subject: Opposition to Minnesota HF 2177 - Prohibition of Flavored Tobacco Products\nDears,\n\nAs a responsible small business owner in the tobacco industry, I strongly oppose Minnesota HF 2177. This proposed bill aims to ban flavored tobacco products. While I appreciate the state's commitment to public health, an outright ban may have unintended consequences. Consider the following points:\n	Consumer Behavior: A ban could drive consumers to unregulated sources or more harmful alternatives. Balance regulation with harm reduction.\n	Economic Impact: Our business faces rigorous regulations and high taxes. Further restrictions would harm our livelihoods and employees.\n	Revenue and Job Loss: Banning flavored tobacco products would lead to significant revenue loss and job cuts.\n	Balanced Approach: Let's find a solution that considers both health and business interests.\nThank you for your attention.\n\n_FIRSTNAME_\n_LASTNAME_",
-"_FIRSTNAME_\n_LASTNAME_\n_STREETADDRESS_\n_ADDRESS_\n_DATE_\n\nDears,\n\nAs a responsible small business owner in the tobacco industry, I oppose Minnesota HF2177, which aims to ban flavored tobacco products sale. Prohibitions may push consumers to unregulated sources, undermining public health goals. Our industry faces strict regulations and high taxes like Minnesota's 95% tobacco tax, and further restrictions could harm businesses and employees. Flavored products are crucial to our revenue, and a ban could lead to job losses and closures, especially after the pandemic. I urge the committee to consider balanced solutions that protect public health and small businesses.\n\nBanning flavored tobacco products would also have a negative impact on consumer choice and personal freedom. Adults should have the right to make informed decisions about their tobacco use, including the option to choose flavored products if they so desire.\n\n_FIRSTNAME_\n_LASTNAME_"
-,"_FIRSTNAME_\n_LASTNAME_\n_STREETADDRESS_\n_ADDRESS_\n_DATE_\n\nI am writing to express my deep concerns regarding HF 2177. As a business owner in the tobacco industry, I urge the committee to reconsider this bill due to its potential adverse effects on revenue and commerce.\nImplementing a ban on flavored tobacco products would significantly impact my business and many others in the industry. Flavored products constitute a substantial portion of our sales, and the sudden prohibition would result in a substantial loss of revenue. This loss could have severe consequences for the viability of our businesses and the livelihoods of our employees.\nThe interruption to commerce caused by such a ban would be detrimental to local economies. Small businesses like mine contribute to the economic vitality of our communities, and any measure that hampers our ability to operate would have ripple effects throughout the supply chain.\nThank you.\n\n_FIRSTNAME_\n_LASTNAME_"
-];
-   
-   const randomBodyIndex = Math.floor(Math.random() * paragraphs.length);
-    let selectedParagraph = paragraphs[randomBodyIndex];
-    selectedParagraph = selectedParagraph.replace("_FIRSTNAME_", firstName);
-    selectedParagraph = selectedParagraph.replace("_LASTNAME_", lastName);
-    selectedParagraph = selectedParagraph.replace("_STREETADDRESS_", streetAddress);
-    selectedParagraph = selectedParagraph.replace("_ADDRESS_", address);
-    selectedParagraph = selectedParagraph.replace("_FIRSTNAME_", firstName);
-    selectedParagraph = selectedParagraph.replace("_LASTNAME_", lastName);
-    let currentDate = new Date();
-    let year = currentDate.getFullYear();
-    let month = currentDate.getMonth(); 
-    let day = currentDate.getDate();
-
-
-    selectedParagraph = selectedParagraph.replace("_DATE_", (month+1)+"/"+day+"/"+year);
-    console.log(selectedParagraph)
-
-    var body = encodeURIComponent(selectedParagraph); // The body of the email
-    console.log("********************body*****************")
-    console.log(body)
-
-    var bcc = 'stopmnflavorban@gmail.com'; // The BCC recipient
-
-    // Creating the mailto link
-    var mailtoLink = `mailto:${email}?bcc=${bcc}&subject=${subject}&body=${body}`;
-
-    // Setting window.location.href to the mailto link
-    window.location.href = mailtoLink;
-}
-</script>
-
+            window.location.href = `mailto:${email}?bcc=${bcc}&subject=${subject}&body=${body}`;
+        }
+    </script>
 </body>
 </html>
